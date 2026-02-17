@@ -27,16 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
             formMsg.style.color = 'red';
             formMsg.textContent = '';
             let valid = true;
-
-            if (nombre.value.trim()) {
+            if (!nombre.value.trim()) {
                 formMsg.textContent = 'Por favor, ingresa tu nombre. ';
                 valid = false;
             }
-            else if (email.value.trim() || !email.checkValidity()) {
+            else if (!email.value.trim() || !email.checkValidity()) {
                 formMsg.textContent = 'Por favor, ingresa un correo válido. ';
                 valid = false;
             }
-            else if (mensaje.value.trim()) {
+            else if (!mensaje.value.trim()) {
                 formMsg.textContent = 'Por favor, ingresa tu mensaje. ';
                 valid = false;
             }
