@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             formMsg.style.color = 'red';
             formMsg.textContent = '';
             let valid = true;
+            
             if (!nombre.value.trim()) {
                 formMsg.textContent = 'Por favor, ingresa tu nombre. ';
                 valid = false;
