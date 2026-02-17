@@ -134,7 +134,7 @@
 /*----------------------- Main section ------------------*/
 
 .main-ct {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/imagenes/business-owner-working-their-strategy.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/imagenes/business-owner-working-their-strategy.webp);
     background-size: cover;
     background-position: center;
     height: auto;
