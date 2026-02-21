@@ -168,6 +168,12 @@
         margin: 0;
     }
 
+    .hm:hover{
+        color: #fff;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
     .dp {
         display: none;
     }
