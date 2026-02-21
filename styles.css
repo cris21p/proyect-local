@@ -15,6 +15,12 @@
     padding: 20px;
     width: 100%;
     height: 70px;
+    container: nd;
+    container-type: inline-size;
+}
+
+.nav-lin{
+    display: none;
 }
 
 .nav-ct {
@@ -86,6 +92,10 @@
     background-color: #63646484;
 }
 
+.cp{
+    font-size: 26px;
+}
+
 .dp {
     display: flex;
     position: absolute;
@@ -129,6 +139,41 @@
 /*----------------------- End Nav Header ------------------*/
 
 
+/*----------------------- aquery header ------------------*/
+
+@container nd (min-width: 768px) {
+    .nav-ct {
+        width: 90%;
+    }
+
+    .button-menu{
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+    }
+
+    .nav-ff {
+        display: none;
+    }
+
+    .hm{
+        margin: 0;
+        padding: 10px;
+    }
+
+    .dp {
+        display: none;
+    }
+}
+
+/*----------------------- End aquery header ------------------*/
 
 
 /*----------------------- Main section ------------------*/
@@ -141,6 +186,8 @@
     width: 100%;
     display: flex;
     padding: 50px;
+    container: main;
+    container-type: inline-size;
 }
 
 .sec-1 {
@@ -225,7 +272,7 @@
     color: #fff;
 }
 
-.bt {
+.bt-1 {
     width: 150px;
     height: 40px;
     font-size: 1.4rem;
@@ -243,7 +290,90 @@
 
 /*----------------------- End Main Section ------------------*/
 
+/*----------------------- aquery Main Section ------------------*/
 
+@container main (min-width: 768px) {
+
+    .sec-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+        gap: 50px;
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+
+    .ct-1 {
+        padding: 40px;
+        width: 550px;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+    }
+
+    .dp-2 svg {
+        width: 31px;
+        height: 31px;
+        color: #fff;
+    }
+
+
+
+    .st-1 h3 {
+        font-family: 'Smooch Sans';
+        font-style: oblique;
+        font-size: 2rem;
+    }
+
+    .st-2 h1 {
+        font-family: 'smooch Sans', sans-serif;
+        font-style: normal;
+        margin-top: 30px;
+        font-size: 4rem;
+    }
+
+    .ct-t{
+        width: 500px;
+        justify-content: center;
+        font-family: 'Smooch Sans';
+        font-style: oblique;
+        font-size: 1.6rem;
+    }
+
+    .ct-2 {
+        font-family: 'smooch Sans', sans-serif;
+        font-size: 1.8rem;
+        top: 300px;
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.579);
+    }
+
+    .ct-3 {
+        font-family: 'smooch Sans', sans-serif;
+        font-size: 1.3rem;
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        text-align: left;
+        color: #fff;
+    }
+
+}
+
+/*----------------------- End aquery Main Section ------------------*/
 
 
 /*----------------------- New Div ------------------*/
@@ -255,6 +385,8 @@
     height: auto;
     text-align: center;
     padding: 50px;
+    container: new-div;
+    container-type: inline-size;
 }
 
 .H-N {
@@ -272,6 +404,18 @@
     margin-left: auto;
     margin-right: auto;
     color: #333;
+}
+
+.dv-ct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    color: #000;
 }
 
 .img-div {
@@ -396,6 +540,82 @@
 
 /*----------------------- End New Div ------------------*/
 
+/*----------------------- aquery New Div ------------------*/
+
+@container new-div (min-width: 700px) {
+    .new-div {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+        height: auto;
+    }
+
+    .P-N{
+        font-family: 'smooch Sans', sans-serif;
+        font-size: 1.6rem;
+        margin-top: 30px;
+        width: 50%;
+        color: #333;
+    }
+
+    .dd-nn{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        align-self:center;
+        flex-direction: row;
+        font-size: 1.6rem;
+        width: 70%;
+        height: auto;
+        color: #000;
+    }
+
+    .img-div{
+        width: 100%;
+    }
+
+    .dv-n{
+        display: grid;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        align-self: center;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        gap: 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    .ct-n{
+        font-family: 'smooch Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        color: #333;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .ct-n h4{
+        box-sizing: border-box;
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
+}
+
+/*----------------------- End aquery New Div ------------------*/
+
 
 /*----------------------- Cons Section ------------------*/
 
@@ -407,6 +627,8 @@
     height: auto;
     text-align: center;
     padding: 50px;
+    container: cons;
+    container-type: inline-size;
 }
 
 .cons-ct {
@@ -447,6 +669,48 @@
 
 /*----------------------- End Cons Section ------------------*/
 
+/*----------------------- aquery Cons Section ------------------*/
+
+@container cons (min-width: 700px) {
+    .cons {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+        height: auto;
+    }
+
+    .cons-ct {
+        font-family: 'smooch Sans', sans-serif;
+        font-size: 1.6rem;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        margin-top: 30px;
+        width: 100%;
+        color: #333;
+    }
+
+    .cons-p {
+        font-family: 'smooch Sans', sans-serif;
+        font-size: clamp(1rem, 2vw, 2rem);
+        margin-top: 30px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        color: #333;
+    }
+
+    .cons-img {
+        width: 50%;
+    }
+}
+
+/*----------------------- End aquery Cons Section ------------------*/
+
 
 /*----------------------- Footer Section ------------------*/
 
@@ -457,6 +721,8 @@
     height: auto;
     color: #fff;
     padding: 20px;
+    container: dis-n;
+    container-type: inline-size;
 }
 
 .dis-n-ct{
@@ -541,6 +807,119 @@
 
 /*----------------------- End dis Section ------------------*/
 
+/*----------------------- aquery Footer Section ------------------*/
+
+@container dis-n (min-width: 785px) {
+    .dis-n {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+        height: auto;
+    }
+
+    .dis-c{
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 50px;
+        height: auto;
+        color: #000000;
+    }
+
+    .dis-n-ct {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        height: 70vh;
+        color: #000000;
+    }
+
+    .dis-img {
+        display: flex;
+        position: relative;
+        margin: 0px;
+        width: 45rem;
+        margin-left: 50px;
+        margin-right: 0px;
+        margin-top: -100px;
+    }
+
+    .dis-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .dgg {
+        display: flex;
+        position: relative;
+        width: 220px;
+        height: 220px;
+        margin-right: -100px;
+        margin-left: -100px;
+        margin-bottom: 0;
+        margin-top: -500px;
+        background-image: linear-gradient(#e84a90, #545af8);
+        color: #fff;
+        border-radius: 100%;
+    }
+
+    .d-cm {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        background-color: #e9e7e7;
+        height: auto;
+        max-height: 80%;
+        padding: 0;
+        margin: 0;
+        color: #000000;
+        padding: 20px;
+    }
+
+    .d-cm h4 {
+        font-size: 3rem;
+        margin-top: 10px;
+    }
+
+    .d-cm p {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        text-align:start ;
+        box-sizing: border-box;
+    }
+
+    .d-cm button {
+        width: 130px;
+        height: 60px;
+        font-size: 1.7rem;
+        margin-top: 30px;
+        background-color:#359bdb ;
+        border:none ;
+        border-radius :35px ;
+        color:#fff ;
+    }
+
+    .d-cm button:hover {
+        background-color:#5985a7 ;
+    }
+
+}
+
+/*----------------------- End aquery Footer Section ------------------*/
+
 /*----------------------- Dv Section ------------------*/
 
 .dv{
@@ -550,6 +929,8 @@
     width: 100%;
     height: auto;
     color: rgb(199, 197, 197);
+    container: dv;
+    container-type: inline-size;
 }
 
 .dv-ct{
@@ -574,14 +955,14 @@
     padding: 20px;
     color: #000;
     background-color: #fff;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 5px 10px 0px rgba(0, 0, 0, 0.652);
 }
 
 .dv-ic{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: rgba(2, 250, 250, 0.198);
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -590,15 +971,22 @@
 .dv-cm h4{
     font-size: 2rem;
     margin-top: 10px;
+    color: rgb(5, 134, 134);
 }
 
 .dv-cm p{
     font-size: 1.5rem;
     margin-top: 5px;
     padding: 20px;
-    color: #000;
+    color: #000000bc;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.dv-cm svg{
+    width: 30px;
+    height: 30px;
+    color: rgba(0, 172, 172, 0.822);
 }
 
 .db{
@@ -607,27 +995,151 @@
     font-size: 1.7rem;
     border: none;
     border-radius: 25px;
-    color: #000000;
+    color: #000000ab;
     cursor: pointer;
 }
 
 .ic-1{
-    background-color: #ffa0a0;
+    background-color: #ffa0a056;
+}
+
+.ic-1 svg{
+    color: #d38686;
+}
+
+.cm-2 h4{
+    color: #e08b8b;
 }
 
 .ic-2{
-    background-color: #5dffb0;
+    background-color: #5dffb16e;
+}
+
+.ic-2 svg{
+    color: #4bc088;
+}
+
+.cm-3 h4{
+    color: #44926c;
 }
 
 .ic-3{
-    background-color: #ffd65d;
+    background-color: #ffd75d72;
+}
+
+.ic-3 svg{
+    color: #c49343;
+}
+
+.cm-4 h4{
+    color: #bf9044;
 }
 
 .ic-4{
-    background-color: #ce5dff;
+    background-color: #ce5dff60;
+}
+
+.ic-4 svg{
+    color: #a14cc0;
+}
+
+.cm-5 h4{
+    color: #a14cc0;
 }
 
 /*----------------------- End Dv Section ------------------*/
+
+/*----------------------- aquery Dv Section ------------------*/
+@container dv (min-width: 700px) {
+    .dv {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+        margin: auto;
+        height: auto;
+    }
+
+    .dv-ct {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-self: center;
+        margin: auto;
+        align-items: center;
+        gap: 20px;
+        width: 83%;
+        height: auto;
+        text-align: center;
+    }
+
+    .dv-cm {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .dv-ic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .dv-cm h4 {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    .dv-cm p {
+        font-size: 1.4rem;
+        width: 120%;
+        font-display: swap;
+        margin-top: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin: 0;
+    }
+
+    .db {
+        width: 150px;
+        height: 40px;
+        font-size: 1.7rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    .cm-1 {
+        margin-top: 120px;
+    }
+
+    .cm-2 {
+        margin-bottom: 95px;
+    }
+
+    .cm-3 {
+        margin-top: 120px;
+    }
+
+    .cm-4 {
+        margin-bottom: 95px;
+    }
+
+    .cm-5 {
+        margin-top: 120px;
+    }
+
+}
+
+/*----------------------- End aquery Dv Section ------------------*/
 
 /*----------------------- Ft Section ------------------*/
 
@@ -638,6 +1150,8 @@
     background-color: rgb(220, 219, 219);
     width: 100%;
     height: auto;
+    container: ft;
+    container-type: inline-size;
 }
 
 .ft-ct{
@@ -717,6 +1231,102 @@
 
 /*----------------------- End Ft Section ------------------*/
 
+/*----------------------- aquery Ft Section ------------------*/
+
+@container ft (min-width: 800px) {
+    .ft {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+        margin: auto;
+        height: auto;
+    }
+
+    .ft-ct {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+
+    .gl {
+        display: none;
+        position: relative;
+        margin-left: -100px;
+        margin-right: -250px;
+        margin-bottom: -350px;
+        background-image: linear-gradient(#e84a90, #545af8);
+        width: 45%;
+        height: 500px;
+    }
+
+    .gl-1 {
+        display: none;
+        position: relative;
+        margin: 0px auto;
+        margin-right: -0px;
+        margin-left: -10px;
+        margin-top: -300px;
+        background-image: linear-gradient(#e84a90, #545af8);
+        width: 55%;
+        height: 500px;
+    }
+
+    .ld-k {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color:#fff ;
+        align-items:center ;
+        margin-top: 40px;
+        width: 1000px;
+        height: 600px;
+        margin-bottom: 40px;
+        }
+
+    .rt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .ld-k-ct {
+        display: flex;
+        width : 90% ;
+        height :100% ;
+    }
+
+    .ld-k-ct img {
+        width :100% ;
+    }
+
+    .rt h4 {
+        padding: 20px ;
+        font-size :2.5rem ;
+        text-align: left;
+    }
+
+    .rt p {
+        font-size :1.7rem ;
+        padding :20px ;
+        color :#000 ;
+        text-align :left ;
+        margin-bottom :20px ;
+    }
+}
+
+/*----------------------- End aquery Ft Section ------------------*/
+
 /*----------------------- Contact Section ------------------*/
 
 .contact{
@@ -726,6 +1336,8 @@
     background-color: #333;
     width: 100%;
     height: auto;
+    container: contact;
+    container-type: inline-size;
 }
 
 .contact-ct{
@@ -906,6 +1518,133 @@
 
 /*----------------------- End Contact Section ------------------*/
 
+/*----------------------- aquery Contact Section ------------------*/
+
+@container contact (min-width: 700px) {
+    .contact {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+        height: auto;
+    }
+
+    .contact-ct {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .contact-cm {
+        display: flex;
+        background-color:#fff;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width : 60rem;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .tl{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        height: auto;
+        padding: 35px;
+        text-align: center;
+    }
+
+    .tl h3{
+        text-align: left;
+        width: 100%;
+        font-size: 3.5rem;
+        margin-top: 10px;
+        color: #333;
+    }
+
+    .ct {
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    .ct span svg {
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        align-self: center;
+        color:#000000;
+    }
+
+    .ct p {
+        font-size: 2rem;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .ct-ic {
+        display:flex ;
+        flex-direction: row-reverse;
+        justify-content: left;
+        justify-self: center;
+        align-items: center;
+        color:#000;
+        align-self: center;
+        width: 100%;
+        height: 50px;
+    }
+
+    .ct-ic svg {
+        display: flex;
+        justify-content:center;
+        justify-self:center;
+        align-items:center;
+        align-self:center;
+        color: #000;
+    }
+
+    .ct-fo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        width: 100%;
+        padding: 20px;
+        height: auto;
+        font-size: 1.4rem;
+    }
+
+    .sb{
+        width: 150px;
+        height: 40px;
+        font-size: 1.4rem;
+        margin-top: 10px;
+        background-color: #359bdb;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+}
+
+/*----------------------- End aquery Contact Section ------------------*/
+
+/*----------------------- Footer Section ------------------*/
+
 .footer{
     display: flex;
     justify-content: center;
@@ -914,6 +1653,8 @@
     background-color: rgb(220, 219, 219);
     width: 100%;
     height: 160px;
+    container: footer;
+    container-type: inline-size;
 }
 
 .footer-ct{
@@ -970,3 +1711,49 @@
     color: #000000;
     margin: 0;
 }
+
+/*----------------------- End Footer Section ------------------*/
+
+/*----------------------- aquery Footer Section ------------------*/
+
+@container footer (min-width: 700px) {
+    .footer {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+        height: 160px;
+    }
+
+    .footer-ct {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer-ct p {
+        font-size: 1.2rem;
+        margin-top: 2px;
+        color: #000000;
+        text-align: center;
+    }
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/*----------------------- End aquery Footer Section ------------------*/
