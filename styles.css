@@ -14,7 +14,7 @@
     overflow: hidden;
     padding: 20px;
     width: 100%;
-    height: 70px;
+    height: auto;
     container: nd;
     container-type: inline-size;
 }
@@ -155,6 +155,7 @@
         position: static;
         flex-direction: row;
         background-color: transparent;
+        background-color: #077da1;
         width: auto;
         height: auto;
     }
@@ -164,8 +165,8 @@
     }
 
     .hm{
+        font-size: 20px;
         margin: 0;
-        padding: 10px;
     }
 
     .dp {
